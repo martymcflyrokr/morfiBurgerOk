@@ -9,7 +9,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import CustomizedBadges from './CartBar'
 
 
@@ -41,6 +40,10 @@ const ResponsiveAppBar = () => {
     <AppBar position="fixed" style={{ background: '#000000' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          <div className="contenedorLogo" style= {{ width: '70px', padding: '10px 20px 3px'}} >
+            <img src="./morfilogooficial.png" style={{padding: '2px', width: '100%'}}></img>
+
+          </div>
           <Typography
             variant="h6"
             noWrap
