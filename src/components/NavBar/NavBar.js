@@ -41,9 +41,6 @@ const ResponsiveAppBar = () => {
     <AppBar position="fixed" style={{ background: '#000000' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <div className="container-logomorfi">
-            <img src="./morfilogooficial.png" className="logomorfi" style={{ width: '20%', padding: '10px' }} alt="logo_morfi"/>
-          </div>
           <Typography
             variant="h6"
             noWrap
@@ -98,7 +95,7 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          
           <Typography
             variant="h5"
             noWrap
