@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import './test.css';
 import NavBar from './components/NavBar/NavBar';
-import CardItem from './components/Card/Card';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 
 function App() {
@@ -10,11 +9,7 @@ function App() {
   return (
     <div className="App">
         <NavBar/>
-        {/* <CardItem/>
-        <CardItem/>
-        <CardItem/> */}
-
-      Contenido del App   
+        <ItemListContainer title={"contenedor de items"} />
     </div>
   )
 }
