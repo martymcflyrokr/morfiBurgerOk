@@ -1,0 +1,21 @@
+.cantidad-productos { 
+    border: 4px;
+    border:white;
+    width: 40px;
+}
+
+.container-cantidades { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 30px;
+    background-image:linear-gradient(whitesmoke,white);
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.container-cantidades button {
+    height: 25px;
+
+}

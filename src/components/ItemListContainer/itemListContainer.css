@@ -1,7 +1,10 @@
-.contenedor-title {
-    color: black;
-    font-size: 150px;
-    border-color: blue;
-    border-width: 2px;
-    border-style: dashed;
+.title-item-list-container {
+    font-size: 30px;
+}
+.contenedor-list{
+    padding-bottom: 40px;
+    padding-top: 5px;
+    margin-top:100px;
+    border-bottom: solid 2px;
+    border-color: whitesmoke;
 }

@@ -1,10 +1,13 @@
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './itemListContainer.css'
+import '../ItemList/ItemList'
+import ItemList from '../ItemList/ItemList';
+
 const ItemListContainer = ({title}) => {
     return(
         <>
-        <div className="contenedor-title">
-            <p> {title} </p>
+        <div className="contenedor-list">
+        <p className="title-item-list-container"> {title} </p>
+            <ItemList/>
         </div>
         </>
     )
