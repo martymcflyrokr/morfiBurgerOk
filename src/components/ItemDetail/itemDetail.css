@@ -1,0 +1,17 @@
+img { 
+    width: 100%;
+}
+
+.container-detalle-producto { 
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 1rem;
+    box-shadow: 13px 10px 15px -7px rgba(0,0,0,0.1);
+    justify-content: center;
+}
+.detalle-producto {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: center;
+    
+}
