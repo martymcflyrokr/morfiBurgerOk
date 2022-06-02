@@ -1,20 +1,31 @@
 import './App.css';
 import './test.css';
+import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemList from './components/ItemList/ItemList'
-import productos from './utils/productMocks'
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Contacto from './pages/Contacto';
+import NotFound from './pages/NotFound';
+import Detalle from './pages/Detalle'
+import Home from './pages/Home';
+import Carousel from 'react-bootstrap/Carousel'
+import Categoria from './pages/Categoria'
 
 function App() {
   
   return (
     <div className="App">
-        <NavBar/>
-        <ItemListContainer title={"NUESTRA SELECCIÓN"}/>
-        <div>
-          <ItemDetailContainer/>
-        </div>
+        <BrowserRouter>
+           <NavBar/> 
+            <Routes>
+              <Route path='/' element={<Home/>}/>
+              <Route path='/categoria/:id' element={<Categoria/>}/>
+              <Route path='/item/:id' element={<Detalle/>}/>
+              <Route path='/productos' element={<ItemListContainer title={"NUESTROS PRODUCTOS"}/>}/>
+              <Route path='/contacto' element={<Contacto/>}/>
+              <Route path='*' element={<NotFound/>}/>
+
+            </Routes>
+        </BrowserRouter>
     </div>
   )
   

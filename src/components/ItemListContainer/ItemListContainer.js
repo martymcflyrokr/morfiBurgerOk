@@ -6,8 +6,8 @@ const ItemListContainer = ({title}) => {
     return(
         <>
         <div className="contenedor-list">
-        <p className="title-item-list-container"> {title} </p>
-            <ItemList/>
+        <p className="title-item-list-container"> {title}</p>
+            <ItemList />
         </div>
         </>
     )

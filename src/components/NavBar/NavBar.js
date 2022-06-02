@@ -10,11 +10,13 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import CustomizedBadges from './CartWidget'
+import { Link } from 'react-router-dom';
 
 
 
 
-const pages = ['HAMBURGESAS', 'BEBIDAS', 'POSTRES', 'PROMOS'];
+
+const pages = ['HAMBURGESAS', 'BEBIDAS', 'POSTRES', 'SUCURSALES'];
 
 
 const ResponsiveAppBar = () => {
@@ -37,18 +39,19 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="fixed" style={{ background: '#000000' }}>
+    <AppBar position="static" style={{ background: '#000000' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          
           <div className="contenedorLogo" style= {{ width: '70px', padding: '10px 20px 3px'}} >
+            
             <img src="./morfilogooficial.png" style={{padding: '2px', width: '100%'}}></img>
-
+    
           </div>
+          
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -59,9 +62,11 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            MORFIBURGER
-          </Typography>
+            
+            <Link style={{textDecoration: 'none', color: 'white'}} to="/">MORFIBURGER</Link>
 
+          </Typography>
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -72,6 +77,7 @@ const ResponsiveAppBar = () => {
               color="inherit"
             >
               <MenuIcon />
+              
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -91,14 +97,46 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+                <ul style={{textDecoration: 'none', listStyle:'none', color: 'white'}}>
+                  <li>
+                    <Button 
+                      variant="text" 
+                      color="primary" 
+                        style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                          color: 'white'}}>
+                        <Link to="/productos" >PRODUCTOS</Link>
+                    </Button>
+                    </li>
+                  <li>
+                  <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'
+                      }}>
+                    <Link to="/category/:id">CATEGORIAS</Link>
+                </Button>
+                  </li>
+                  <li>
+                  <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'
+                      }}>
+                    <Link to="/contacto">CONTACTO</Link>
+                </Button>
+                </li>
+                </ul>
+             
             </Menu>
           </Box>
-          
           <Typography
             variant="h5"
             noWrap
@@ -118,15 +156,46 @@ const ResponsiveAppBar = () => {
             MORFIBURGER
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+                <div style={{textDecoration: 'none', listStyle:'none', color: 'white'}}>
+                <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'}}>
+                      <Link to="/productos" style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                          color: 'white'}}>PRODUCTOS</Link>
+                  </Button>
+                <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'
+                      }}>
+                    <Link to="/categoria/:id" style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                          color: 'white'}}>CATEGORIAS</Link>
+                </Button>
+                <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'
+                      }}>
+                    <Link to="/contacto" style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                          color: 'white'}}>CONTACTO</Link>
+                </Button>
+                </div>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
