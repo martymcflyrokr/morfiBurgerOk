@@ -16,22 +16,24 @@ const ItemList = ({}) => {
         getProductos()
         .then((res)=> {
             setProducts(res)
-            
-            
         })
         .catch((err)=> {
         })
         .finally(() => {
         })
-
     },[])
     
     const getProductos = () => {
-
         return new Promise ( (resolve, reject) => {
+            if (categoria) {
             // setTimeout(() => {
+                resolve(productos.filter((prod) => prod.categoria === categoria))
+                // }, 2000)
+            }
+            else {
                 resolve(productos)
-            // }, 2000)
+            }
+            
             
         } )
     }
@@ -43,9 +45,8 @@ const ItemList = ({}) => {
                 products.map(({nombre, precio, stock, imagen, categoria, id}) => {
                     
                     return (
-                            <div>
-                                <Grid item 
-                                key={id}>
+                            <div key={id}>
+                                <Grid item  >
                                     <Item 
                                         nombre={nombre} 
                                         precio={precio} 

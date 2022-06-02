@@ -1,12 +1,10 @@
 import '../Item/item.css';
-import ItemCount from '../ItemCount/ItemCount';
 import Button from '@mui/material/Button';
-import { Grid, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const Item = ({nombre, precio, stock, imagen, id, categoria}) => {
 
-    console.log('este es el ID de producto:', id)
+    console.log('este es el ID de producto:', id, stock)
     
     return (
         <div className="card-item">

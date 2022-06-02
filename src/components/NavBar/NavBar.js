@@ -177,11 +177,51 @@ const ResponsiveAppBar = () => {
                       listStyle:'none', 
                       color: 'white'
                       }}>
-                    <Link to="/categoria/:id" style={{
+                    <Link to="/categoria/combo" style={{
                           textDecoration: 'none', 
                           listStyle:'none', 
-                          color: 'white'}}>CATEGORIAS</Link>
+                          color: 'white'}}>COMBO</Link>
                 </Button>
+                <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'
+                      }}>
+                    <Link to="/categoria/especial" style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                          color: 'white'}}>ESPECIAL</Link>
+                </Button>
+                <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'
+                      }}>
+                    <Link to="/categoria/postre" style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                          color: 'white'}}>POSTRE</Link>
+                </Button>
+                <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'
+                      }}>
+                    <Link to="/categoria/bebida" style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                          color: 'white'}}>BEBIDA</Link>
+                </Button>
+                
                 <Button 
                   variant="text" 
                   color="primary" 
