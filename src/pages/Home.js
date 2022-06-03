@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <>
             <Container>
-                <div style={{width: '100%'}}>
+                <div style={{width: '90%'}}>
                     <img src="./images/carrouselimgs/img5.jpg"/>
                     <ItemListContainer title={"BIENVENIDO A MORFIBURGER"}/>
                 </div>
