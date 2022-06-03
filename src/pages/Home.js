@@ -7,9 +7,10 @@ const Home = () => {
             <Container>
                 <div style={{width: '100%'}}>
                     <img src="./images/carrouselimgs/img5.jpg"/>
+                    <ItemListContainer title={"BIENVENIDO A MORFIBURGER"}/>
                 </div>
             </Container>
-            <ItemListContainer title={"BIENVENIDO A MORFIBURGER"}/>
+            
         </>
     )
 }
