@@ -26,7 +26,7 @@ Debes ejecutar 'npm start' en la consola.
 ## Screenshots
 
 
-![morfiburgerguia](https://user-images.githubusercontent.com/22405706/171770321-0d5d28be-89b3-4318-ba59-77ba2bb2ef35.gif)
+![final](https://user-images.githubusercontent.com/22405706/171771774-7db819e3-79c8-4a88-b1da-744d801ba25f.gif)
 
 
 
