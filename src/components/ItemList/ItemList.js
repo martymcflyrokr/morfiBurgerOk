@@ -9,7 +9,7 @@ import productos from '../../utils/productMocks';
 const ItemList = ({}) => {
     const [products,setProducts] = useState ([])
     const {categoria} = useParams()
-    
+    console.log('use params :', useParams())
 
     useEffect(()=> {
         console.log('esta es la cat: ', categoria)
@@ -21,7 +21,7 @@ const ItemList = ({}) => {
         })
         .finally(() => {
         })
-    },[])
+    },[categoria])
     
     const getProductos = () => {
         return new Promise ( (resolve, reject) => {
@@ -33,8 +33,6 @@ const ItemList = ({}) => {
             else {
                 resolve(productos)
             }
-            
-            
         } )
     }
 

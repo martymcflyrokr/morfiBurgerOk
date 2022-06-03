@@ -10,23 +10,29 @@ import Home from './pages/Home';
 import Categoria from './pages/Categoria'
 
 function App() {
-  
-  return (
-    <div className="App">
-        <BrowserRouter>
-           <NavBar/> 
-            <Routes>
-              <Route path='/' element={<Home/>}/>
-              <Route path='/categoria/:categoria' element={<Categoria/>}/>
-              <Route path='/item/:id' element={<Detalle/>}/>
-              <Route path='/productos' element={<ItemListContainer title={"NUESTROS PRODUCTOS"}/>}/>
-              <Route path='/contacto' element={<Contacto/>}/>
-              <Route path='*' element={<NotFound/>}/>
 
-            </Routes>
-        </BrowserRouter>
-    </div>
-  )
-  
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <NavBar/>
+                <Routes>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='/categoria/:categoria' element={<Categoria/>}/>
+                    <Route path='/item/:id' element={<Detalle/>}/>
+                    <Route
+                        path='/productos'
+                        element={<ItemListContainer title = {
+                            "NUESTROS PRODUCTOS"
+                        } />
+                        }
+                    />
+                    <Route path='/contacto' element={<Contacto/>}/>
+                    <Route path='*' element={<NotFound/>}/>
+
+                </Routes>
+            </BrowserRouter>
+        </div>
+    )
+
 }
 export default App;

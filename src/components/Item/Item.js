@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Item = ({nombre, precio, stock, imagen, id, categoria}) => {
 
-    console.log('este es el ID de producto:', id, stock)
+    // console.log('este es el ID de producto:', id)
     
     return (
         <div className="card-item">
@@ -16,7 +16,6 @@ const Item = ({nombre, precio, stock, imagen, id, categoria}) => {
                     <h4 className="producto-info">{nombre}</h4>
                     <p className="precio-info">${precio}</p>
                     <p className="precio-info">Categoria: {categoria}</p>
-                    
                     <Button variant="contained" ><Link to={"/item/" + id} style={{color: 'white', textDecoration:'none'}}>VER DETALLE</Link></Button>
                 </div>
                 
