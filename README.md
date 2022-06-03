@@ -23,15 +23,6 @@ disponibles para su venta online, junto con información acerca de dichos produc
 Debes ejecutar 'npm start' en la consola.
 
 
-## Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run test
-```
-
-
 ## Screenshots
 
 ![giphy](https://user-images.githubusercontent.com/22405706/171769694-b35e605d-0046-43f9-9395-140d49d4706d.gif)
