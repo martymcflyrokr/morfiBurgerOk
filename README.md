@@ -33,6 +33,7 @@ To run tests, run the following command
 
 
 ## Screenshots
+![giphy](https://user-images.githubusercontent.com/22405706/171768783-d5c51111-a84b-4fe1-ac08-e1170a80b3a6.gif)
 
-![App Screenshot](https://media.giphy.com/media/2L9ZOQdPGrv5wSMJ62/giphy.gif)
+
 
