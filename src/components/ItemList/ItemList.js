@@ -8,12 +8,9 @@ import productos from '../../utils/productMocks';
 
 const ItemList = ({}) => {
     const [products,setProducts] = useState ([])
-    const {categoria} = useParams()
-    console.log('use params :', useParams())
-    
+    const {categoria} = useParams()    
 
     useEffect(()=> {
-        console.log('esta es la cat: ', categoria)
         getProductos()
         .then((res)=> {
             setProducts(res)

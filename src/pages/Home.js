@@ -5,14 +5,12 @@ const Home = () => {
     return (
         <>
             <Container>
-                <div style={{width: '90%'}}>
-                    <img src="./images/carrouselimgs/img5.jpg"/>
+                <div>
+                    <img src="./images/carrouselimgs/img5.jpg" alt="imagen-portada"/>
                     <ItemListContainer title={"BIENVENIDO A MORFIBURGER"}/>
                 </div>
             </Container>
-            
         </>
     )
 }
-
 export default Home

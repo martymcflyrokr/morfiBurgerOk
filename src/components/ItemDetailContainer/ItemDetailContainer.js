@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
         //     console.log("Respuesta GetItem: ", res)
         //     setProduct(res)
         // })
-        console.log("productos filtrados: ", productFilter)
+        // console.log("productos filtrados: ", productFilter)
         if(productFilter === undefined){
 
         }else {

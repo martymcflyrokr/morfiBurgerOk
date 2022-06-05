@@ -1,8 +1,13 @@
 import '../ItemDetail/itemDetail.css'
 import { Grid, Container, Button } from '@mui/material'
 import ItemCount from '../ItemCount/ItemCount'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({data}) => {
+
+    const [cantidad, setCantidad] = useState(0)
+    const [showButton, setShowButton] = useState(false)
 
     return (
         <div className="detalle-producto">
@@ -15,9 +20,23 @@ const ItemDetail = ({data}) => {
                     <h2>{data.nombre}</h2>
                     <h3>Precio: ${data.precio}</h3> 
                     <p>{data.descripcion}</p>
-                    <ItemCount stock={data.stock}/>
-                    <Button variant="contained" color="success">Agregar Al Carrito</Button> 
+                    {!showButton ?
+                    <ItemCount 
+                        data = {data}
+                        stock={data.stock} 
+                        actualizarCantidad={setCantidad}
+                        cantidad={cantidad}
+                        setShowButton = {setShowButton}
+                        />
+                        :
+                    <Button variant = "outlined"><Link to='/cart'
+                    style={{
+                        textDecoration: 'none', 
+                        listStyle:'none', 
+                            }}>TERMINAR COMPRA</Link></Button>}
+
                 </Grid>
+
             </Grid>
         </Container>
         </div>

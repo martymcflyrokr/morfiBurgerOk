@@ -1,36 +1,35 @@
 import '../ItemCount/itemCount.css'
 import '../Item/Item'
-import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 
+const ItemCount = ({data, stock, actualizarCantidad, cantidad, setShowButton}) => {
 
-
-
-const ItemCount = ({stock}) => {
-    const [count, setCount] = useState(0);
-    
     const clickSuma = () => {
-        
-        if( count <= stock ) {
-            setCount (count + 1);
+
+        if( cantidad <= stock ) {
+            actualizarCantidad(cantidad + 1)
+            console.log('Producto agregado: ', data)
         }
     };
 
     const clickResta = () => {
-        if ( count > 0) {
-            setCount (count - 1);
+        if ( cantidad > 0) {
+            actualizarCantidad (cantidad - 1);
         }
     };
 
     return (
+        <>
         <div className="container-cantidades">
             
             <Button variant="outlined" onClick={clickResta} >-</Button>
             <div className="cantidad-productos">
-                <p>{count}</p>
+                <p>{cantidad}</p>
             </div>
             <Button variant="outlined" onClick={clickSuma} >+</Button>
         </div>
+            <Button variant="contained" onClick={ () => {setShowButton(true)}}>AGREGAR PRODUCTOS</Button>
+        </>
     )
 }
 

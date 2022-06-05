@@ -7,6 +7,7 @@ import Contacto from './pages/Contacto';
 import NotFound from './pages/NotFound';
 import Detalle from './pages/Detalle'
 import Home from './pages/Home';
+import Cart from './pages/Cart'
 import Categoria from './pages/Categoria'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                     <Route path='/' element={<Home/>}/>
                     <Route path='/categoria/:categoria' element={<Categoria/>}/>
                     <Route path='/item/:id' element={<Detalle/>}/>
+                    <Route path='/cart' element={<Cart/>}/>
                     <Route
                         path='/productos'
                         element={<ItemListContainer title = {
@@ -28,6 +30,7 @@ function App() {
                     />
                     <Route path='/contacto' element={<Contacto/>}/>
                     <Route path='*' element={<NotFound/>}/>
+                    
 
                 </Routes>
             </BrowserRouter>
