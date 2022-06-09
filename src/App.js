@@ -9,11 +9,13 @@ import Detalle from './pages/Detalle'
 import Home from './pages/Home';
 import Cart from './pages/Cart'
 import Categoria from './pages/Categoria'
+import { CartProvider } from './context/CartContext';
 
 function App() {
 
     return (
         <div className="App">
+        <CartProvider>
             <BrowserRouter>
                 <NavBar/>
                 <Routes>
@@ -30,10 +32,9 @@ function App() {
                     />
                     <Route path='/contacto' element={<Contacto/>}/>
                     <Route path='*' element={<NotFound/>}/>
-                    
-
                 </Routes>
             </BrowserRouter>
+        </CartProvider>
         </div>
     )
 

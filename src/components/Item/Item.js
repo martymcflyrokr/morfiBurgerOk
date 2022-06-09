@@ -1,5 +1,4 @@
 import '../Item/item.css';
-import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
 const Item = ({nombre, precio, stock, imagen, id, categoria}) => {
@@ -10,13 +9,11 @@ const Item = ({nombre, precio, stock, imagen, id, categoria}) => {
         <div className="card-item">
             <div className="card-container">
                 <div className="card-imagencontainer">
-                    <img src={`../images/${imagen}`} className="imagen-producto"/>
+                <Link to={"/item/" + id}><img src={`../images/${imagen}`} className="imagen-producto" alt={`"imagen_producto_"${nombre}`} /></Link>
                 </div>
                 <div className="card-info">
                     <h4 className="producto-info">{nombre}</h4>
                     <p className="precio-info">${precio}</p>
-                    <p className="precio-info">Categoria: {categoria}</p>
-                    <Button variant="contained" ><Link to={"/item/" + id} style={{color: 'white', textDecoration:'none'}}>VER DETALLE</Link></Button>
                 </div>
                 
             </div>

@@ -6,7 +6,9 @@ const productos = [
         descripcion: '',
         id : 1,
         imagen : 'b1.png',
-        categoria: 'especial'
+        categoria: 'especial',
+        cantidad: 0
+        
     },
     {
         nombre : 'La Román',
@@ -15,7 +17,8 @@ const productos = [
         descripcion: '',
         id : 2,
         imagen : 'b2.png',
-        categoria: 'especial'
+        categoria: 'especial',
+        cantidad: 0
     },
     {
         nombre : 'La Maradó',
@@ -24,7 +27,8 @@ const productos = [
         descripcion: '',
         id : 3,
         imagen : 'b3.png',
-        categoria: 'combo'
+        categoria: 'combo',
+        cantidad: 0
 
     },
     {
@@ -34,7 +38,8 @@ const productos = [
         descripcion: '',
         id : 4,
         imagen : 'b4.png',
-        categoria: 'combo'
+        categoria: 'combo',
+        cantidad: 0
 
     },
     {
@@ -44,7 +49,8 @@ const productos = [
         descripcion: '',
         id : 5,
         imagen : 'b5.png',
-        categoria: 'combo'
+        categoria: 'combo',
+        cantidad: 0
 
     },
     {
@@ -54,7 +60,8 @@ const productos = [
         descripcion: '',
         id : 6,
         imagen : 'p1.png',
-        categoria: 'postre'   
+        categoria: 'postre',
+        cantidad: 0
     },
     {
         nombre : 'Cookie Helada',
@@ -63,7 +70,8 @@ const productos = [
         descripcion: '',
         id : 7,
         imagen : 'p2.png',
-        categoria: 'postre'   
+        categoria: 'postre',
+        cantidad: 0  
     },
     {
         nombre : 'postre Oreo',
@@ -72,7 +80,8 @@ const productos = [
         descripcion: '',
         id : 8,
         imagen : 'p3.png',
-        categoria: 'postre'   
+        categoria: 'postre', 
+        cantidad: 0  
     },
     {
         nombre : 'Cerveza Brahma',
@@ -81,7 +90,8 @@ const productos = [
         descripcion: '',
         id : 9,
         imagen : 'c1.png',
-        categoria: 'bebida'   
+        categoria: 'bebida',
+        cantidad: 0   
     },
     {
         nombre : 'Cerveza Heineken',
@@ -90,21 +100,12 @@ const productos = [
         descripcion: '',
         id : 10,
         imagen : 'c2.png',
-        categoria: 'bebida'   
+        categoria: 'bebida',
+        cantidad: 0   
     }
 
     ]
 
-const producto = 
-    {
-        nombre : 'La Messi',
-        precio : 850,
-        stock : 4,
-        descripcion: '2 hamburgesas bañadas en Chedar, con doble Bacon y nuestra salsa especial de la casa! - Papas incluidas!',
-        id : 11,
-        imagen : 'b1.png'
-    }
 
 
 export default productos
-export {producto}

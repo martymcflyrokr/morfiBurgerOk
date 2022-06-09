@@ -1,10 +1,18 @@
 import '../ItemDetail/itemDetail.css'
 import { Grid, Container, Button } from '@mui/material'
 import ItemCount from '../ItemCount/ItemCount'
-import { useState } from 'react'
+import { useState} from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import CartContext from '../../context/CartContext'
 
 const ItemDetail = ({data}) => {
+
+    const { addProductToCart} = useContext(CartContext)
+    
+    const sendItemToCart = (qty) => {
+        addProductToCart({...data, cantidad : qty})
+    }
 
     const [cantidad, setCantidad] = useState(0)
     const [showButton, setShowButton] = useState(false)
@@ -22,11 +30,11 @@ const ItemDetail = ({data}) => {
                     <p>{data.descripcion}</p>
                     {!showButton ?
                     <ItemCount 
-                        data = {data}
-                        stock={data.stock} 
+                        stock={data.stock}
                         actualizarCantidad={setCantidad}
                         cantidad={cantidad}
                         setShowButton = {setShowButton}
+                        onAdd = {sendItemToCart}
                         />
                         :
                     <Button variant = "outlined"><Link to='/cart'
