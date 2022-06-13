@@ -6,14 +6,14 @@ const ItemCount = ({stock, actualizarCantidad, cantidad, setShowButton, onAdd}) 
 
     const clickSuma = () => {
 
-        if( cantidad <= stock ) {
+        if( cantidad < stock ) {
             actualizarCantidad(cantidad + 1)
             // console.log('Producto agregado: ', data)
         }
     };
 
     const clickResta = () => {
-        if ( cantidad > 0) {
+        if ( cantidad > 1) {
             actualizarCantidad (cantidad - 1);
         }
     };
@@ -27,7 +27,7 @@ const ItemCount = ({stock, actualizarCantidad, cantidad, setShowButton, onAdd}) 
             </div>
             <Button variant="outlined" onClick={clickSuma} >+</Button>
         </div>
-            <Button variant="contained" onClick={ () => {onAdd(cantidad)}}>AGREGAR PRODUCTOS</Button>
+            <Button variant="contained" onClick={ () => {onAdd(cantidad)}} >AGREGAR PRODUCTOS</Button>
         </>
             
     )

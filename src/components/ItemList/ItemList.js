@@ -4,6 +4,8 @@ import Item from '../Item/Item';
 import Grid from '@mui/material/Grid';
 import { useState, useEffect } from 'react';
 import productos from '../../utils/productMocks';
+import { collection, doc, setDoc } from "firebase/firestore";
+import db from '../../utils/firebaseConfig'
 
 
 const ItemList = ({}) => {
@@ -34,6 +36,7 @@ const ItemList = ({}) => {
         } )
     }
 
+  
     return (
         <>
             <Grid container className="contenedor-lista-productos" spacing={{ xs: 2, md: 3}} columns={{ xs: 4, sm: 8, md: 12 }} >

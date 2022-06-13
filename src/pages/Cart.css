@@ -1,0 +1,35 @@
+.contenedor-general {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.contenedor-titulos {
+   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenido-tabla > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 40px;
+    width: 20%;
+}
+
+.contenido-tabla {
+    border-bottom: solid 1px;
+    border-color: whitesmoke;
+}
+
+/* .imagen-producto { 
+    width: 100%;
+}
+
+.imagen-producto img{ 
+    width: 100%;
+    padding-top: 10%;
+} */

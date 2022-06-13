@@ -12,21 +12,21 @@ const Contacto = () => {
                         <ul style={{listStyle: 'none'}}>
                             <li>
                                 <div> 
-                                    <img src="./images/icons/shophouse.png" style={{width: '20%'}}/>
+                                    <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch'}/>
                                     <p style={{marginBottom:'0px', marginTop:'0px'}}>CATAN SHOPPING</p>
                                     <p style={{marginBottom:'0px', marginTop:'0px'}}>Av. J. Manuel de Rosas 4235</p>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <img src="./images/icons/shophouse.png" style={{width: '20%'}}/>
+                                    <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch'}/>
                                     <p style={{marginBottom:'0px', marginTop:'0px'}}>B. DORREGO</p>
                                     <p style={{marginBottom:'0px', marginTop:'0px'}}>Lopez May 4235</p>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <img src="./images/icons/shophouse.png" style={{width: '20%'}}/>
+                                    <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch'}/>
                                     <p style={{marginBottom:'0px', marginTop:'0px'}}>B. INDEPENDENCIA</p>
                                     <p style={{marginBottom:'0px', marginTop:'0px'}}>Av. Cobo 25359</p>
                                 </div>

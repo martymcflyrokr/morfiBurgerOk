@@ -97,16 +97,20 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-                <ul style={{textDecoration: 'none', listStyle:'none', color: 'white'}}>
-                  <li>
+                <ul style={{textDecoration: 'none', listStyle:'none', color: 'white', padding:'3px'}}>
+                  <li >
                     <Button 
                       variant="text" 
-                      color="primary" 
+                      color="primary"
                         style={{
                           textDecoration: 'none', 
                           listStyle:'none', 
                           color: 'white'}}>
-                        <Link to="/productos" >PRODUCTOS</Link>
+                        <Link to="/productos"
+                         style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                      }}>PRODUCTOS</Link>
                     </Button>
                     </li>
                   <li>
@@ -118,10 +122,46 @@ const ResponsiveAppBar = () => {
                       listStyle:'none', 
                       color: 'white'
                       }}>
-                    <Link to="/category/:id">CATEGORIAS</Link>
+                    <Link to="/categoria/combo">COMBO</Link>
                 </Button>
                   </li>
                   <li>
+                  <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'
+                      }}>
+                    <Link to="/categoria/especial">ESPECIAL</Link>
+                </Button>
+                </li>
+                <li>
+                  <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'
+                      }}>
+                    <Link to="/categoria/postre">POSTRE</Link>
+                </Button>
+                </li>
+                <li>
+                  <Button 
+                  variant="text" 
+                  color="primary" 
+                    style={{
+                      textDecoration: 'none', 
+                      listStyle:'none', 
+                      color: 'white'
+                      }}>
+                    <Link to="/categoria/bebida">BEBIDA</Link>
+                </Button>
+                </li>
+                <li>
                   <Button 
                   variant="text" 
                   color="primary" 
@@ -153,7 +193,7 @@ const ResponsiveAppBar = () => {
               textDecoration: 'none',
             }}
           >
-            MORFIBURGER
+            <Link style={{textDecoration: 'none', color: 'white'}} to="/">MORFIBURGER</Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 <div style={{textDecoration: 'none', listStyle:'none', color: 'white'}}>

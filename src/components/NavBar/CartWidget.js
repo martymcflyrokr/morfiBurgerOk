@@ -5,15 +5,20 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CartContext from '../../context/CartContext'
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useContext } from 'react';
+import { useContext } from 'react'
+import Badge from '@mui/material/Badge';
+
+
 
 
  function CartWidget() {
 
-  const { deleteItem, clearCart } = useContext(CartContext)
+  const { deleteItem, clearCart, cantidadEnCarro} = useContext(CartContext)
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const { cartListItems } = React.useContext(CartContext)
+
+
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -28,9 +33,11 @@ import { useContext } from 'react';
 
   return (
     <div>
-      <Button aria-describedby={id} variant="contained" onClick={handleClick}>
-       <ShoppingCartIcon variant="outlined"/>
-      </Button>
+      <Badge badgeContent={cantidadEnCarro} color="primary">
+        <Button Button aria-describedby={id} variant="contained" onClick={handleClick}>
+          <ShoppingCartIcon variant="outlined"/>
+        </Button>
+      </Badge>
       <Popover
         id={id}
         open={open}
@@ -51,10 +58,11 @@ import { useContext } from 'react';
                                     </div>
                                     <div className='items-nombre-precio'>
                                           <h5>{item.nombre}</h5>  
-                                          <p>${item.precio}</p>
+                                          <p>${item.precio * item.cantidad} x {item.cantidad}</p>
                                     </div>
                                     <Button>
-                                      <DeleteIcon onClick={() => {deleteItem(item.id)}}>
+                                      <DeleteIcon onClick={() => {
+                                          deleteItem(item.id)}}>
                                       </DeleteIcon>
                                     </Button>
                               </div>

@@ -12,10 +12,17 @@ const ItemDetail = ({data}) => {
     
     const sendItemToCart = (qty) => {
         addProductToCart({...data, cantidad : qty})
+        terminarCompra();
     }
 
     const [cantidad, setCantidad] = useState(0)
     const [showButton, setShowButton] = useState(false)
+
+    const terminarCompra = () => {
+        setShowButton(true);
+    }
+    
+       
 
     return (
         <div className="detalle-producto">
@@ -28,6 +35,7 @@ const ItemDetail = ({data}) => {
                     <h2>{data.nombre}</h2>
                     <h3>Precio: ${data.precio}</h3> 
                     <p>{data.descripcion}</p>
+
                     {!showButton ?
                     <ItemCount 
                         stock={data.stock}
