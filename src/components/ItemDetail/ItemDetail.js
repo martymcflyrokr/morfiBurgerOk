@@ -15,7 +15,7 @@ const ItemDetail = ({data}) => {
         terminarCompra();
     }
 
-    const [cantidad, setCantidad] = useState(0)
+    const [cantidad, setCantidad] = useState(1)
     const [showButton, setShowButton] = useState(false)
 
     const terminarCompra = () => {

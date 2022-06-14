@@ -11,6 +11,7 @@ const CartProvider = ({children}) => {
 
     useEffect ( () => {
         console.log('Carrito Modificado: ', cartListItems)
+        setCantidadEnCarro(getQuantity())
     },[cartListItems])
     
     const addProductToCart = (product) => {
@@ -21,10 +22,17 @@ const CartProvider = ({children}) => {
                 setCartListItems(cartListItems => [...cartListItems, product])
                 setCantidadEnCarro(cantidadEnCarro + product.cantidad)
                 setPrecioTotal(precioTotal + product.precio * product.cantidad)
-
                 // return console.log('Se agrego el producto : ', product)
             }
         }
+    }
+
+    const getQuantity = () => {
+        let acumulador = 0
+        cartListItems.forEach(prod => {
+            acumulador += prod.cantidad
+        })
+        return acumulador
     }
 
     const deleteItem = (id) => {
@@ -36,6 +44,7 @@ const CartProvider = ({children}) => {
     const clearCart = () => {
         setCartListItems([])
         setCantidadEnCarro (0)
+        setPrecioTotal (0)
         console.log('Se vaciaron todos los elementos del carrito')
     }
 
@@ -47,6 +56,7 @@ const CartProvider = ({children}) => {
         clearCart,
         precioTotal,
         cantidadEnCarro,
+        getQuantity,
       
         
         

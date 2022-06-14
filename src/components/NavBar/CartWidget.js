@@ -7,9 +7,7 @@ import CartContext from '../../context/CartContext'
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useContext } from 'react'
 import Badge from '@mui/material/Badge';
-
-
-
+import { Link } from 'react-router-dom';
 
  function CartWidget() {
 
@@ -17,8 +15,6 @@ import Badge from '@mui/material/Badge';
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const { cartListItems } = React.useContext(CartContext)
-
-
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -68,7 +64,10 @@ import Badge from '@mui/material/Badge';
                               </div>
                         )
                   })}
-                <Button onClick ={() => {clearCart()}}>VACIAR CARRITO</Button>
+                  <div style={{display: 'flex', justifyContent: 'space-between'}}> 
+                    <Button onClick ={() => {clearCart()}}>VACIAR CARRITO</Button>
+                    <Button><Link to='/cart' style={{textDecoration:'none'}}>IR AL CARRITO</Link></Button>
+                  </div>
             </div>
         </Typography>
       </Popover>

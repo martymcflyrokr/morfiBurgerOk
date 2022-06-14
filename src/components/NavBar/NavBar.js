@@ -8,28 +8,35 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import CustomizedBadges from './CartWidget'
 import { Link } from 'react-router-dom';
-
-
-
-
-
-const pages = ['HAMBURGESAS', 'BEBIDAS', 'POSTRES', 'SUCURSALES'];
-
+import CartContext from "../../context/CartContext"
+import { useContext, useEffect, useState } from "react"
 
 const ResponsiveAppBar = () => {
+
+
+  const {cantidadEnCarro} = useContext(CartContext)
+  const [hayProdus, setHayProdus] = useState(false)
+
+  useEffect(()=> {
+    validadorProductos()
+}, [cantidadEnCarro])
+
+  const validadorProductos = () => {
+    if (cantidadEnCarro !== 0) {
+        setHayProdus(true)
+    } else if (cantidadEnCarro == 0) {
+        setHayProdus(false)
+    }
+}
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
@@ -38,6 +45,7 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(null);
   };
 
+
   return (
     <AppBar position="static" style={{ background: '#000000' }}>
       <Container maxWidth="xl">
@@ -45,7 +53,7 @@ const ResponsiveAppBar = () => {
           
           <div className="contenedorLogo" style= {{ width: '70px', padding: '10px 20px 3px'}} >
             
-            <img src="./morfilogooficial.png" style={{padding: '2px', width: '100%'}}></img>
+            <img src="./morfilogooficial.png" style={{padding: '2px', width: '100%'}} alt='logo-morfiburger'></img>
     
           </div>
           
@@ -279,7 +287,9 @@ const ResponsiveAppBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-          <CustomizedBadges/>
+          {!hayProdus ? <div></div> : <CustomizedBadges/>}
+           
+          
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"

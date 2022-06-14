@@ -2,28 +2,36 @@ import '../pages/Cart.css'
 import { Button, Container } from "@mui/material"
 import DeleteButton from "@mui/icons-material/Delete"
 import CartContext from "../context/CartContext"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { Link } from 'react-router-dom'
 
 
 const Cart = (( ) => {
 
 
-    const { cartListItems, precioTotal, cantidadEnCarro} = useContext(CartContext)
+    const { cartListItems, precioTotal, cantidadEnCarro, deleteItem} = useContext(CartContext)
+
+    useEffect(()=> {
+        validadorProductos()
+    }, [cantidadEnCarro])
+    
 
     const [hayProdus, setHayProdus] = useState(false)
 
     const validadorProductos = () => {
 
-        if (cantidadEnCarro !== []) {
+        if (cantidadEnCarro !== 0) {
             setHayProdus(true)
+        } else if (cantidadEnCarro == 0) {
+            setHayProdus(false)
         }
-        return hayProdus
     }
-    return (
-        <Container className='contenedor-general'>
 
+    return (
+
+        <Container className='contenedor-general'>
             
-             <div className='contenedor-titulos'>
+            <div className='contenedor-titulos'>
 
                     <p>Imagen</p>
                     <p>Producto</p>
@@ -36,15 +44,15 @@ const Cart = (( ) => {
                 {cartListItems.map((item) => {
                     const {id, nombre, imagen, precio, cantidad} = item
                     
+                    
                     return(
-                        
+                        <>
                          <div className='contenido-tabla' key={id} 
                             style={{display: 'flex', 
                             justifyContent:'space-around', 
                             alignItems:'center'}}>
                                 <div className='imagen-producto'>
-                                    <img src={`../images/${imagen}`}></img>
-                                
+                                    <img src={`../images/${imagen}`} alt='imagen-producto'></img>
                                 </div>
                                 <div className='nombre-producto'>
                                     <h5>{nombre}</h5>
@@ -56,25 +64,31 @@ const Cart = (( ) => {
                                     <h5>${precio}</h5>
                                 </div>
                                 <div className='precio-total'>
-                                    <h5>${precio*cantidad}</h5>
+                                   <h5>${precio*cantidad}</h5>
                                 </div>
                                 <div className='boton-eliminar'>
-                                    <DeleteButton></DeleteButton>
+                                    <DeleteButton onClick={() => {
+                                          deleteItem(item.id)}}>ELIMINAR PRODUCTOS</DeleteButton>
                                 </div>
                         </div>
+         
+                        </>
                     )
                 })}
-                    <div>
-                        <h3>Subtotal: ${precioTotal} </h3>
-                    </div>
-                    <div>
+                {!hayProdus ?
+                    <div className='contenedor-general-sin-items'>
                         <h4>NO TENES PRODUCTOS AGREGADOS AL CARRITO.</h4>
                         <h6>¿ya viste nuestros productos?</h6>
-                        <Button>VOLVER A VER PRODUCTOS</Button>
-                    </div> 
+                    <Button variant='outlined'><Link to='/productos' style={{textDecoration:'none'}}>VOLVER A VER PRODUCTOS</Link></Button>
+                    </div>
+                    : <div>
+                        <h3>Subtotal: ${precioTotal} </h3>
+                    </div>
+                    }
+                    
+                   
+
         </Container>
-
-
         )
 })
 

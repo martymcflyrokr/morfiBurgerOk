@@ -2,7 +2,7 @@ import '../ItemCount/itemCount.css'
 import '../Item/Item'
 import Button from '@mui/material/Button';
 
-const ItemCount = ({stock, actualizarCantidad, cantidad, setShowButton, onAdd}) => {
+const ItemCount = ({stock, actualizarCantidad, cantidad, onAdd}) => {
 
     const clickSuma = () => {
 
