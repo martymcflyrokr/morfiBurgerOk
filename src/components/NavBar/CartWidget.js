@@ -66,7 +66,7 @@ import { Link } from 'react-router-dom';
                   })}
                   <div style={{display: 'flex', justifyContent: 'space-between'}}> 
                     <Button onClick ={() => {clearCart()}}>VACIAR CARRITO</Button>
-                    <Button><Link to='/cart' style={{textDecoration:'none'}}>IR AL CARRITO</Link></Button>
+                    <Button><Link to='/cart' style={{textDecoration:'none'}}>CHECKOUT</Link></Button>
                   </div>
             </div>
         </Typography>

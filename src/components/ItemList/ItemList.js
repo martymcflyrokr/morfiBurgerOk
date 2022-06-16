@@ -4,44 +4,55 @@ import Item from '../Item/Item';
 import Grid from '@mui/material/Grid';
 import { useState, useEffect } from 'react';
 import productos from '../../utils/productMocks';
-import { collection, doc, setDoc } from "firebase/firestore";
-import db from '../../utils/firebaseConfig'
+//firestore
+import { collection, getDocs } from "firebase/firestore";
+import db from '../../utils/firebaseConfig';
+
 
 
 const ItemList = ({}) => {
     const [products,setProducts] = useState ([])
     const {categoria} = useParams()    
 
+
     useEffect(()=> {
-        getProductos()
-        .then((res)=> {
-            setProducts(res)
+        getProducts().then( (productos) => {
+            // console.log('getProducts : ', productos)
         })
-        .catch((err)=> {
-        })
-        .finally(() => {
-        })
-    },[categoria])
+        
     
-    const getProductos = () => {
-        return new Promise ( (resolve, reject) => {
-            if (categoria) {
-            // setTimeout(() => {
-                resolve(productos.filter((prod) => prod.categoria === categoria))
-                // }, 2000)
-            }
-            else {
-                resolve(productos)
-            }
-        } )
+    },[categoria])
+
+    const getProducts = async () => {
+        const productSnapshot = await getDocs(collection(db, "productos"));
+        const productList = productSnapshot.docs.map((doc) => {
+            let product = doc.data()
+            product.id = doc.id
+            return product;
+        })
+        return productList
+
     }
+    
+    // const getProducts = () => {
+    //     return new Promise ( (resolve, reject) => {
+    //         if (categoria) {
+    //         // setTimeout(() => {
+    //             resolve(productos.filter((prod) => prod.categoria === categoria))
+    //             // }, 2000)
+    //         }
+    //         else {
+    //             resolve(productos)
+    //         }
+    //     } )
+    // }
 
   
     return (
         <>
             <Grid container className="contenedor-lista-productos" spacing={{ xs: 2, md: 3}} columns={{ xs: 4, sm: 8, md: 12 }} >
                 {
-                products.map(({nombre, precio, stock, imagen, categoria, id}) => {
+                productos.map(({nombre, precio, stock, imagen, categoria, id}) => {
                     
                     return (
                             <div key={id}>

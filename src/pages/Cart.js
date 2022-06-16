@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 const Cart = (( ) => {
 
 
-    const { cartListItems, precioTotal, cantidadEnCarro, deleteItem} = useContext(CartContext)
+    const { cartListItems, precioTotal, cantidadEnCarro, deleteItem, getPrecioTotal} = useContext(CartContext)
 
     useEffect(()=> {
         validadorProductos()
@@ -82,7 +82,7 @@ const Cart = (( ) => {
                     <Button variant='outlined'><Link to='/productos' style={{textDecoration:'none'}}>VOLVER A VER PRODUCTOS</Link></Button>
                     </div>
                     : <div>
-                        <h3>Subtotal: ${precioTotal} </h3>
+                        <h3>Subtotal: ${ getPrecioTotal()} </h3>
                     </div>
                     }
                     
