@@ -1,40 +1,34 @@
 import ItemDetail from "../ItemDetail/ItemDetail"
-import productos from "../../utils/productMocks"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
+import { getDoc, doc} from "firebase/firestore";
+import db from '../../utils/firebaseConfig'
 
 
 
 const ItemDetailContainer = () => {
     const { id } = useParams()
     const [product , setProduct] = useState({})
-    
-    // const getItem = () => {
-    //     return new Promise( (resolve, reject) => {
-    //         // setTimeout(() => {
-    //             resolve(producto)
-    //         // }, 2000)
-    //     })
-    // }
 
 
     useEffect(() => {
-        // getItem()
-        // .then( (res) => {
-        //     console.log("Respuesta GetItem: ", res)
-        //     setProduct(res)
-        // })
-        // console.log("productos filtrados: ", productFilter)
-        if(productFilter === undefined){
 
-        }else {
-            setProduct(productFilter)
-        }
+        getProduct()
+        .then( (prod) => {
+            setProduct(prod)
+        })
+
     }, [id])
 
-    const productFilter = productos.find( (product) => {
-        return product.id == id
-    })
+
+    const getProduct = async() => {
+        const docRef = doc(db, "productos", id)
+        const docSnap = await getDoc(docRef)
+        let product = docSnap.data()
+        product.id = docSnap.id
+        return product
+        
+    }
 
     return(
         <>
