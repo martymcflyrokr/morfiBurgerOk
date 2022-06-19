@@ -28,13 +28,13 @@ const ItemDetail = ({data}) => {
         <div className="detalle-producto">
         <Container className="container-detalle-producto">
             <Grid container spacing={2}>
-                <Grid item xs={8} className="contenedor-imagen">
+                <Grid item xs={8} className="contenedor-imagen-detail">
                     <img src={`../images/${data.imagen}`} className="imagen-producto" alt="imagen-burger"/>
                 </Grid>
                 <Grid item xs={4} >
-                    <h2>{data.nombre}</h2>
-                    <h3>Precio: ${data.precio}</h3> 
-                    <p>{data.descripcion}</p>
+                    <p className='titulo-burger'>{data.nombre}</p>
+                    <p className='precio-burger'>Precio: ${data.precio}</p> 
+                    <p className='descripcion-burger'>{data.descripcion}</p>
 
                     {!showButton ?
                     <ItemCount 

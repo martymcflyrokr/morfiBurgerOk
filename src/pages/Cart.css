@@ -1,4 +1,5 @@
 .contenedor-general {
+    padding: 6%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -25,11 +26,6 @@
     border-color: whitesmoke;
 }
 
-/* .imagen-producto { 
-    width: 100%;
+.imagen-producto-carrito{
+    width:100%;
 }
-
-.imagen-producto img{ 
-    width: 100%;
-    padding-top: 10%;
-} */

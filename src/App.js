@@ -10,6 +10,8 @@ import Home from './pages/Home';
 import Cart from './pages/Cart'
 import Categoria from './pages/Categoria'
 import { CartProvider } from './context/CartContext';
+import Footer from './components/Footer/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
@@ -33,6 +35,7 @@ function App() {
                     <Route path='/contacto' element={<Contacto/>}/>
                     <Route path='*' element={<NotFound/>}/>
                 </Routes>
+                <Footer/>
             </BrowserRouter>
         </CartProvider>
         </div>

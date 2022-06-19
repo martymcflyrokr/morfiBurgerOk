@@ -23,6 +23,7 @@ const CartProvider = ({children}) => {
                 setCartListItems(cartListItems => [...cartListItems, product])
                 setCantidadEnCarro(cantidadEnCarro + product.cantidad)
                 setPrecioTotal(getPrecioTotal())
+                
             }
         }
     }

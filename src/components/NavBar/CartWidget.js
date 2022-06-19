@@ -48,12 +48,12 @@ import { Link } from 'react-router-dom';
             <div>
                   {cartListItems.map( (item) => {
                         return (
-                              <div className='item-carrito' key={item.id} style={{display:'flex', width:'300px', justifyContent:'space-around', alignItems:'center', borderBottom:'solid', borderColor:'whitesmoke'}}>
+                              <div className='item-carrito' key={item.id} style={{display:'flex', width:'300px', justifyContent:'space-around', alignItems:'center', borderBottom:'solid', borderColor:'whitesmoke', padding:'10px'}}>
                                     <div className='item-imagen' style={{width:'40%'}}>
                                           <img src={`../images/${item.imagen}`} className="imagen-producto" alt="imagen-burger"/>
                                     </div>
                                     <div className='items-nombre-precio'>
-                                          <h5>{item.nombre}</h5>  
+                                          <h6>{item.nombre}</h6>  
                                           <p>${item.precio * item.cantidad} x {item.cantidad}</p>
                                     </div>
                                     <Button>

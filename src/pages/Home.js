@@ -1,14 +1,21 @@
-import { Container } from "@mui/material"
+import { Container, Stack, Item } from "@mui/material"
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
+import Banner from '../components/Banner/Banner'
+import Infografia from "../components/Infografia/Infografia"
+
 
 const Home = () => {
+
     return (
-            <Container>
-                <div>
-                    <img src="./images/carrouselimgs/img5.jpg" alt="imagen-portada"/>
-                    <ItemListContainer title={"BIENVENIDO A MORFIBURGER"}/>
+            <div>
+                <div className='contenedor-imagenes-slide' style={{width:'100%'}}>
+                <Banner/>
+                <Infografia/>
                 </div>
+            <Container>
+                <ItemListContainer title={"BIENVENIDO A MORFIBURGER"}/>
             </Container>
+            </div>
     )
 }
 export default Home

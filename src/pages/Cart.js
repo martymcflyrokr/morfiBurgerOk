@@ -31,7 +31,7 @@ const Cart = (( ) => {
 
         <Container className='contenedor-general'>
             
-            <div className='contenedor-titulos'>
+            {hayProdus && <div className='contenedor-titulos'>
 
                     <p>Imagen</p>
                     <p>Producto</p>
@@ -39,7 +39,7 @@ const Cart = (( ) => {
                     <p>Precio unitario</p>
                     <p>Precio total</p>
                     <p>Eliminar</p>
-            </div>
+            </div>}
            
                 {cartListItems.map((item) => {
                     const {id, nombre, imagen, precio, cantidad} = item
@@ -51,20 +51,20 @@ const Cart = (( ) => {
                             style={{display: 'flex', 
                             justifyContent:'space-around', 
                             alignItems:'center'}}>
-                                <div className='imagen-producto'>
-                                    <img src={`../images/${imagen}`} alt='imagen-producto'></img>
+                                <div className='contenedor-imagen-producto'>
+                                    <img className="imagen-producto-carrito" src={`../images/${imagen}`} alt='imagen-producto'></img>
                                 </div>
                                 <div className='nombre-producto'>
-                                    <h5>{nombre}</h5>
+                                    <p className='nombre-producto-carro'>{nombre}</p>
                                 </div>
                                 <div className='cantidad-productos'>
-                                    <h5>{cantidad}</h5>
+                                    <precioTotal>{cantidad}</precioTotal>
                                 </div>
                                 <div className='precio-unitario'>
-                                    <h5>${precio}</h5>
+                                    <p className='precio-producto'>${precio}</p>
                                 </div>
                                 <div className='precio-total'>
-                                   <h5>${precio*cantidad}</h5>
+                                   <p className='precio-total-font'>${precio*cantidad}</p>
                                 </div>
                                 <div className='boton-eliminar'>
                                     <DeleteButton onClick={() => {

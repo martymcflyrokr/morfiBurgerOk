@@ -1,6 +1,3 @@
-img { 
-    width: 100%;
-}
 
 .container-detalle-producto { 
     padding-top: 2%;
@@ -14,4 +11,22 @@ img {
     padding-bottom: 40px;
     justify-content: center;
     
+}
+
+.titulo-burger {
+    font-size: 25px;
+} 
+.precio-burger{
+    font-size: 20px;
+}
+.descripcion-burger{
+    font-size: 18px;
+}
+
+.contenedor-imagen-detail {
+    width: 100%;
+}
+
+.imagen-producto {
+    width: 100%;
 }

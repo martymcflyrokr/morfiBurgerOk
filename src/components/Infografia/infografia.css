@@ -1,0 +1,21 @@
+.contenedor-infografia { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-top: solid 1.3px #EBEBEB;
+    border-bottom: solid 1.3px #EBEBEB;
+    text-align: left;
+}
+.contenedor-columnas-infografia {
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-infografia{
+    width: 20%;
+}
+
+.contenedor-imagen {
+    padding-bottom: 5%;
+}

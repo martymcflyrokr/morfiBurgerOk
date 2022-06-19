@@ -1,0 +1,18 @@
+.contenedor-carrousel {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.Carrousel-item {
+    object-fit: cover;
+}
+
+.Carrousel-item > img{
+    width: 100%;
+}
+
+.d-block {
+    width: 100%;
+    display: block!important;
+}
