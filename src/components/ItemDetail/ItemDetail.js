@@ -45,12 +45,12 @@ const ItemDetail = ({data}) => {
                         onAdd = {sendItemToCart}
                         />
                         :
-                    <Button variant = "outlined"><Link to='/cart'
-                    style={{
-                        textDecoration: 'none', 
-                        listStyle:'none', 
-                            }}>TERMINAR COMPRA</Link></Button>}
+                        <div>
+                        <Button variant='outlined'><Link to='/productos' style={{textDecoration:'none'}}>AGREGAR MAS PRODUCTOS</Link></Button>
+                        <Button style={{background:'green'}}><Link style={{textDecoration:'none', color:'white'}}to='/cart' >IR A CHECKOUT</Link></Button>
 
+                    </div>
+                    }
                 </Grid>
 
             </Grid>

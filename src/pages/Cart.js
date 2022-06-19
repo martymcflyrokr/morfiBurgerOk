@@ -1,10 +1,11 @@
 import '../pages/Cart.css'
-import { Button, Container } from "@mui/material"
+import { Button, Container, Modal, TextField } from "@mui/material"
 import DeleteButton from "@mui/icons-material/Delete"
 import CartContext from "../context/CartContext"
 import { useContext, useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
-
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 const Cart = (( ) => {
 
@@ -17,6 +18,37 @@ const Cart = (( ) => {
     
 
     const [hayProdus, setHayProdus] = useState(false)
+    const [formValue, setFormValue] = useState({
+       nombre:'',
+       email:'',
+       telefono:'',
+    })
+ 
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log("prevent default : ", formValue)
+    }
+
+    const handleChange = (e) => {
+        setFormValue({ ...formValue, [e.target.name]: e.target.value})
+    }
+
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+      }
 
     const validadorProductos = () => {
 
@@ -26,6 +58,8 @@ const Cart = (( ) => {
             setHayProdus(false)
         }
     }
+
+  
 
     return (
 
@@ -43,7 +77,6 @@ const Cart = (( ) => {
            
                 {cartListItems.map((item) => {
                     const {id, nombre, imagen, precio, cantidad} = item
-                    
                     
                     return(
                         <>
@@ -71,7 +104,6 @@ const Cart = (( ) => {
                                           deleteItem(item.id)}}>ELIMINAR PRODUCTOS</DeleteButton>
                                 </div>
                         </div>
-         
                         </>
                     )
                 })}
@@ -81,10 +113,63 @@ const Cart = (( ) => {
                         <h6>¿ya viste nuestros productos?</h6>
                     <Button variant='outlined'><Link to='/productos' style={{textDecoration:'none'}}>VOLVER A VER PRODUCTOS</Link></Button>
                     </div>
-                    : <div>
+                    : 
+                    
+                    <div>
                         <h3>Subtotal: ${ getPrecioTotal()} </h3>
+                        <Button variant='outlined'><Link to='/productos' style={{textDecoration:'none'}}>AGREGAR MAS PRODUCTOS</Link></Button>
+                        <Button style={{background:'black', color:'white', marginLeft:'10px'}} onClick={handleOpen}>COMPLETAR COMPRA</Button>
+                        <Modal
+                            open={open}
+                            onClose={handleClose}
+                          
+                            >
+                            <Box sx={style}>
+                                <Typography id="modal-modal-title" variant="h6" component="h2">
+                                FORMULARIO DE CONTACTO
+                                </Typography>
+                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                <form className='formulario-contacto' onSubmit={handleSubmit}>
+                                    <TextField 
+                                        name='nombre'
+                                        label='Nombre y Apellido' 
+                                        variant='outlined' 
+                                        className='items-form'
+                                        onChange={handleChange}
+                                        value={formValue.nombre}
+                                        >
+                                    </TextField>
+                                    <TextField 
+                                        name='telefono'
+                                        label='Telefono' 
+                                        variant='outlined' 
+                                        className='items-form'
+                                        onChange={handleChange}
+                                        value={formValue.telefono}
+                                        >
+                                    </TextField>
+                                    <TextField 
+                                        name='email'
+                                        label='Email' 
+                                        variant='outlined' 
+                                        className='items-form'
+                                        onChange={handleChange}
+                                        value={formValue.email}
+                                        >
+                                    </TextField>
+                                    <Button 
+                                        type='submit' 
+                                        variant='contained' 
+                                        className='items-form'
+                                        >
+                                            ENVIAR
+                                    </Button>
+                                </form>
+                                </Typography>
+                            </Box>
+                            </Modal>
                     </div>
-                    }
+                }
                     
                    
 

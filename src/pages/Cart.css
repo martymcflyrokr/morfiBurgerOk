@@ -29,3 +29,11 @@
 .imagen-producto-carrito{
     width:100%;
 }
+
+.formulario-contacto .items-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

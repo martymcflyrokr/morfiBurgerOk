@@ -28,9 +28,9 @@ const Footer = ( () => {
                 </Col>
                 <Col className="columna-redes">
                 <ul style={{textDecoration:'none', listStyle:'none'}}>
-                    <li><img src='../images/footer/instagram.png' /> @MORFIBURGEROK</li>
-                    <li><img src='../images/footer/facebook.png' /> /MORFIBURGEROK</li>
-                    <li><img src='../images/footer/whatsapp.png' /> (+54) 11 1234 5689</li>
+                    <li><img src='../images/footer/instagram.png' alt='imagen-icono-insta'/> @MORFIBURGEROK</li>
+                    <li><img src='../images/footer/facebook.png' alt='imagen-icono-fb'/> /MORFIBURGEROK</li>
+                    <li><img src='../images/footer/whatsapp.png' alt='imagen-icono-whtsp'/> (+54) 11 1234 5689</li>
                 </ul>        
             </Col>
 
