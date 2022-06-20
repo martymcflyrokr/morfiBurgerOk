@@ -53,14 +53,16 @@ const Cart = (( ) => {
 
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const handleClose = () => {
+        setOpen(false)
+        clearCart()};
 
     const guardarOrden = async (nuevaOrden) => {
         const ordenFirebase = collection( db, 'ordenes',)
         const orderDoc = await addDoc(ordenFirebase, nuevaOrden)
         setOrdenCompleta(orderDoc.id)
         console.log('orden generada : ', orderDoc.id)
-        clearCart()
+        
     }
 
     const style = {
