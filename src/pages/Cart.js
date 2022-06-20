@@ -6,11 +6,13 @@ import { useContext, useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import {addDoc, collection } from 'firebase/firestore'
+import db from '../utils/firebaseConfig'
 
 const Cart = (( ) => {
 
 
-    const { cartListItems, precioTotal, cantidadEnCarro, deleteItem, getPrecioTotal} = useContext(CartContext)
+    const { cartListItems, precioTotal, cantidadEnCarro, deleteItem, getPrecioTotal, clearCart} = useContext(CartContext)
 
     useEffect(()=> {
         validadorProductos()
@@ -23,11 +25,26 @@ const Cart = (( ) => {
        email:'',
        telefono:'',
     })
+    const [orden, setOrden] = useState({
+        comprador :{},
+        items : cartListItems.map( (item) => {
+            return {
+                id : item.id,
+                nombre : item.nombre,
+                precio : item.precio,
+                cantidad : item.cantidad,
+            }
+        }), 
+        total: getPrecioTotal()
+    })
+    const [ordenCompleta, setOrdenCompleta] = useState()
  
-
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("prevent default : ", formValue)
+        setOrden({...orden, comprador : formValue})
+        guardarOrden({...orden, comprador : formValue})
+        console.log("prevent default : ", orden)
+        
     }
 
     const handleChange = (e) => {
@@ -37,6 +54,14 @@ const Cart = (( ) => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const guardarOrden = async (nuevaOrden) => {
+        const ordenFirebase = collection( db, 'ordenes',)
+        const orderDoc = await addDoc(ordenFirebase, nuevaOrden)
+        setOrdenCompleta(orderDoc.id)
+        console.log('orden generada : ', orderDoc.id)
+        clearCart()
+    }
 
     const style = {
         position: 'absolute',
@@ -58,8 +83,6 @@ const Cart = (( ) => {
             setHayProdus(false)
         }
     }
-
-  
 
     return (
 
@@ -122,14 +145,25 @@ const Cart = (( ) => {
                         <Modal
                             open={open}
                             onClose={handleClose}
+                            
                           
                             >
                             <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
+                                {ordenCompleta ? ('COMPRA EXITOSA!') :  
+                                (<Typography id="modal-modal-title" variant="h6" component="h2" >
                                 FORMULARIO DE CONTACTO
-                                </Typography>
+                                </Typography>)}
                                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                <form className='formulario-contacto' onSubmit={handleSubmit}>
+
+                                {ordenCompleta ? (
+                                    <div>
+                                        Se generó su orden correctamente <br/>
+                                        Numero de orden: <b>{ordenCompleta}</b>
+                                    </div> ) 
+                                : 
+                                    (
+                                    <form className='formulario-contacto' onSubmit={handleSubmit}>
+                                        
                                     <TextField 
                                         name='nombre'
                                         label='Nombre y Apellido' 
@@ -164,15 +198,13 @@ const Cart = (( ) => {
                                         >
                                             ENVIAR
                                     </Button>
-                                </form>
+                                </form> )}
+                                
                                 </Typography>
                             </Box>
                             </Modal>
                     </div>
                 }
-                    
-                   
-
         </Container>
         )
 })

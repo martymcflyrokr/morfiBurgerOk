@@ -2,6 +2,7 @@ import { Container, Stack, Item } from "@mui/material"
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
 import Banner from '../components/Banner/Banner'
 import Infografia from "../components/Infografia/Infografia"
+import Novedades from "../components/Novedades/Novedades"
 
 
 const Home = () => {
@@ -13,7 +14,8 @@ const Home = () => {
                 <Infografia/>
                 </div>
             <Container>
-                <ItemListContainer title={"BIENVENIDO A MORFIBURGER"}/>
+                <Novedades/>
+                <ItemListContainer title={"NUESTROS PRODUCTOS"}/>
             </Container>
             </div>
     )

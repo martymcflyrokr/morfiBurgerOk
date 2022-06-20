@@ -1,0 +1,26 @@
+.imagen-novedades { 
+    width: 100%;
+    border-radius: 30px;
+    
+}
+
+.contenedor-imagen-novedades{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.texto-novedades{
+    color: whitesmoke;
+    position:absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 3px 10px black;
+    font-size: 1rem ;
+
+}
+
+.texto-superior {
+    
+}
