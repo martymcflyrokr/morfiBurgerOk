@@ -1,4 +1,4 @@
-import { Container, Stack, Item } from "@mui/material"
+import { Container } from "@mui/material"
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
 import Banner from '../components/Banner/Banner'
 import Infografia from "../components/Infografia/Infografia"

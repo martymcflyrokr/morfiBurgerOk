@@ -1,10 +1,14 @@
 import '../pages/contacto.css'
 import { Container} from "@mui/material"
 import { Grid } from "@mui/material"
+import { useState } from 'react'
+
 
 const Contacto = () => {
 
+
     return(
+       
         <div className='contenedor-general-contacto'>
             <Container> 
                 <Grid container className='contenedor-contacto' >
@@ -13,7 +17,7 @@ const Contacto = () => {
                             <ul style={{listStyle: 'none', alignItems:'center'}}>
                                 <li>
                                     <div> 
-                                        <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch'}/>
+                                        <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch'} />
                                         <p style={{marginBottom:'0px', marginTop:'0px'}}>CATAN SHOPPING</p>
                                         <p style={{marginBottom:'0px', marginTop:'0px'}}>Av. J. Manuel de Rosas 4235</p>
                                     </div>
