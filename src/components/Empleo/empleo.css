@@ -1,22 +1,27 @@
-.contenedor-formulario-general{
-    padding-top: 10%;
+.contenedor-formulario-general{ 
+    display: flex;
+    align-items: center;
+    justify-content:center;
     box-shadow: 13px 10px 15px -7px rgba(0,0,0,0.1);
+    padding-bottom: 5%;
+    margin-top: 5%;
 }
 
 .formulario-campos {
-    display:flex;
-    align-items: center;
-    justify-content: center;
     color: black;
     font-size: 30px;
-    flex-direction: column;
-   
 }
 
-li {
+.formulario-campos li {
     text-decoration: none;
     list-style: none;
-    padding: 0.4rem
-
+    padding-top:1rem;
 }
 
+.formulario-campos li label {
+    color:gray;
+}
+
+.Titulo-formulario-empleo {
+    text-align: right;
+}

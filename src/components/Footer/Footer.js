@@ -17,15 +17,15 @@ const Footer = ( () => {
                 <Col className="columna-sugerencias">
                     <ul style={{textDecoration:'none', listStyle:'none'}}>
                         <li><h6>TRABAJA CON NOSOTROS</h6></li>
-                        <li>DEJANOS TU CV</li>
-                        <li>SUGERENCIAS</li>
+                        <Link to='/contacto' style={{textDecoration:'none', color:'black'}}><li>DEJANOS TU CV</li></Link>
+                        <li>FRANQUICIAS</li>
                     </ul>
                 </Col>
                 <Col className="columna-nosotros">
                     <ul style={{textDecoration:'none', listStyle:'none'}}>
                         <li><h6>INFORMACIÓN</h6></li>
                         <Link to='/contacto' style={{textDecoration:'none', color:'black'}}><li>NUESTRAS SUCURSALES</li></Link>
-                        <li>FRANQUICIAS</li>
+                        <li>CONTACTO</li>
                     </ul>
                 </Col>
                 <Col className="columna-redes">
