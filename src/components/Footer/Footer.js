@@ -2,6 +2,7 @@ import '../Footer/footer.css'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { Link } from 'react-router-dom'
 
 const Footer = ( () => {
     return (
@@ -16,13 +17,14 @@ const Footer = ( () => {
                 <Col className="columna-sugerencias">
                     <ul style={{textDecoration:'none', listStyle:'none'}}>
                         <li><h6>TRABAJA CON NOSOTROS</h6></li>
+                        <li>DEJANOS TU CV</li>
                         <li>SUGERENCIAS</li>
                     </ul>
                 </Col>
                 <Col className="columna-nosotros">
                     <ul style={{textDecoration:'none', listStyle:'none'}}>
                         <li><h6>INFORMACIÓN</h6></li>
-                        <li>NUESTRAS SUCURSALES</li>
+                        <Link to='/contacto' style={{textDecoration:'none', color:'black'}}><li>NUESTRAS SUCURSALES</li></Link>
                         <li>FRANQUICIAS</li>
                     </ul>
                 </Col>

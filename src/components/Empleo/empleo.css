@@ -1,0 +1,22 @@
+.contenedor-formulario-general{
+    padding-top: 10%;
+    box-shadow: 13px 10px 15px -7px rgba(0,0,0,0.1);
+}
+
+.formulario-campos {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 30px;
+    flex-direction: column;
+   
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    padding: 0.4rem
+
+}
+
