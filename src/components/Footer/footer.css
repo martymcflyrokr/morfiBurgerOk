@@ -1,5 +1,6 @@
 .contenedor-footer { 
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 200px;
     background-color: #F7F7F7;
@@ -19,4 +20,9 @@
 
 .columna-redes img {
     width: 10%;
+}
+
+.columna-redes {
+    display: flex;
+    flex-wrap: wrap;
 }

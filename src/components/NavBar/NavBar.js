@@ -130,7 +130,10 @@ const ResponsiveAppBar = () => {
                       listStyle:'none', 
                       color: 'white'
                       }}>
-                    <Link to="/categoria/combo">COMBO</Link>
+                    <Link to="/categoria/combo"  style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                      }}>COMBO</Link>
                 </Button>
                   </li>
                   <li>
@@ -142,7 +145,10 @@ const ResponsiveAppBar = () => {
                       listStyle:'none', 
                       color: 'white'
                       }}>
-                    <Link to="/categoria/especial">ESPECIAL</Link>
+                    <Link to="/categoria/especial"  style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                      }}>ESPECIAL</Link>
                 </Button>
                 </li>
                 <li>
@@ -154,7 +160,10 @@ const ResponsiveAppBar = () => {
                       listStyle:'none', 
                       color: 'white'
                       }}>
-                    <Link to="/categoria/postre">POSTRE</Link>
+                    <Link to="/categoria/postre"  style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                      }}>POSTRE</Link>
                 </Button>
                 </li>
                 <li>
@@ -166,7 +175,10 @@ const ResponsiveAppBar = () => {
                       listStyle:'none', 
                       color: 'white'
                       }}>
-                    <Link to="/categoria/bebida">BEBIDA</Link>
+                    <Link to="/categoria/bebida"  style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                      }}>BEBIDA</Link>
                 </Button>
                 </li>
                 <li>
@@ -178,7 +190,10 @@ const ResponsiveAppBar = () => {
                       listStyle:'none', 
                       color: 'white'
                       }}>
-                    <Link to="/contacto">CONTACTO</Link>
+                    <Link to="/contacto"  style={{
+                          textDecoration: 'none', 
+                          listStyle:'none', 
+                      }}>CONTACTO</Link>
                 </Button>
                 </li>
                 </ul>

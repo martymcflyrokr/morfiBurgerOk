@@ -18,7 +18,7 @@ const Contacto = () => {
             <Container>
                 <Grid container className='contenedor-contacto' >
                     <Grid item xs={4} >
-                        <div className="contenedor-redes" style={{display: 'flex', color:'black', paddingBottom:'20px', padding:'30px'}}>
+                        <div className="contenedor-redes" style={{display: 'flex', color:'black', paddingBottom:'20px', padding:'30px', flexWrap:'wrap'}}>
                             <ul style={{listStyle: 'none', alignItems:'center'}}>
                                 <li>
                                     <div> 

@@ -18,7 +18,7 @@ const Novedades = () => {
                         className='imagen-novedades'/>
                     <div className='texto-novedades'>
                         <p>La nueva especialidad de la casa<br/> a tan solo 1400 ARS.</p>
-                        <Button variant='contained'><Link to='/productos' style={{textDecoration:'none', color:'white'}}>COMPRAR AQUÍ</Link></Button>                   
+                        <Button variant='contained'><Link to='/categoria/especial' style={{textDecoration:'none', color:'white'}}>COMPRAR AQUÍ</Link></Button>                   
                     </div>
                 </div>
                 </Col>

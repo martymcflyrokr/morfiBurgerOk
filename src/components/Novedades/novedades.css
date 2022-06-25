@@ -5,22 +5,19 @@
 }
 
 .contenedor-imagen-novedades{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10%;
+    padding-bottom: 10%;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .texto-novedades{
     color: whitesmoke;
     position:absolute;
-    top: 90%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 2px 3px 10px black;
     font-size: 1rem ;
-
-}
-
-.texto-superior {
-    
 }
