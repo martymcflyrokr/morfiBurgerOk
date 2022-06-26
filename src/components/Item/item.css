@@ -1,16 +1,22 @@
 .card-container {
     display: flex;
     width: 300px;
-    height: 400px;
+    height: 350px;
     border-radius: 1rem 1rem;
     box-shadow: 13px 10px 15px -7px rgba(0,0,0,0.1);
     flex-wrap: wrap;
     flex-direction: column;
     align-items: stretch;
     justify-content: space-around;
-    
+    transition: transform .2s;
 }
+.card-container:hover {
+    transform: scale(1.05);
+    box-shadow: 15px 13px 18px -7px rgba(0,0,0,0.1);
+  }
 .imagen-producto {
    width: 100%;
    height: max-content;
+  
 }
+

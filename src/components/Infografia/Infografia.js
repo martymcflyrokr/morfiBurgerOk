@@ -7,7 +7,7 @@ const Infografia = (() => {
             <Row className="contenedor-columnas-infografia">
                 <Col>
                     <div className='contenedor-imagen'>
-                        <img className = "imagen-infografia" src="../images/infografia/horarios.png"/>
+                        <img className = "imagen-infografia" src="../images/infografia/horarios.png" alt='imagen-infografia3'/>
                     </div>
                     <div>
                         <h4 className='titulo-infografia'>ABIERTO DE 12 a 02 HS</h4>
@@ -20,7 +20,7 @@ const Infografia = (() => {
                 </Col>
                 <Col>
                     <div className='contenedor-imagen'>
-                        <img className = "imagen-infografia" src="../images/infografia/corporate.png"/>
+                        <img className = "imagen-infografia" src="../images/infografia/corporate.png" alt='imagen-infografia1'/>
                     </div>
                     <div>
                         <h4 className='titulo-infografia'>CORPORATE/FIESTAS</h4>
@@ -33,7 +33,7 @@ const Infografia = (() => {
                 </Col>
                 <Col>
                     <div className='contenedor-imagen'>
-                        <img className = "imagen-infografia" src="../images/infografia/music.png"/>
+                        <img className = "imagen-infografia" src="../images/infografia/music.png" alt='imagen-infografia2'/>
                     </div>
                     <div>
                         <h4 className='titulo-infografia'>MUSICA EN VIVO</h4>

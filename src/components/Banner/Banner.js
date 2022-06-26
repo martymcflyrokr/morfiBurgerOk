@@ -17,13 +17,13 @@ const Banner = (() => {
                                     src="../images/carrouselimgs/banner4.png"
                                     alt="First slide"/>
                             </Carousel.Item>
-                            <Carousel.Item interval={500}>
+                            <Carousel.Item interval={1500}>
                                 <img
                                     className="d-block"
                                     src="../images/carrouselimgs/banner5.png"
                                     alt="Second slide"/>
                             </Carousel.Item>
-                            <Carousel.Item>
+                            <Carousel.Item interval={2000}>
                                 <img
                                     className="d-block"
                                     src="../images/carrouselimgs/banner3.png"

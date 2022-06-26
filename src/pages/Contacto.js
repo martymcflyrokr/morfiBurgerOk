@@ -21,7 +21,7 @@ const Contacto = () => {
                         <div className="contenedor-redes" style={{display: 'flex', color:'black', paddingBottom:'20px', padding:'30px', flexWrap:'wrap'}}>
                             <ul style={{listStyle: 'none', alignItems:'center'}}>
                                 <li>
-                                    <div> 
+                                    <div className='contenedor-imagen-redes'> 
                                         <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch'} 
                                             onClick={ () => {handleClick('catan')}} />
                                         <p style={{marginBottom:'0px', marginTop:'0px'}}>CATAN SHOPPING</p>
@@ -29,16 +29,16 @@ const Contacto = () => {
                                     </div>
                                 </li>
                                 <li>
-                                    <div>
-                                        <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch'}
+                                    <div className='contenedor-imagen-redes'>
+                                        <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch2'}
                                             onClick={() => {handleClick('dorrego')}}/>
                                         <p style={{marginBottom:'0px', marginTop:'0px'}}>B. DORREGO</p>
                                         <p style={{marginBottom:'0px', marginTop:'0px'}}>Lopez May 4235</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <div>
-                                        <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch'}
+                                    <div className='contenedor-imagen-redes'>
+                                        <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch3'}
                                             onClick={ () => {handleClick('independencia')}}/>
                                         <p style={{marginBottom:'0px', marginTop:'0px'}}>B. INDEPENDENCIA</p>
                                         <p style={{marginBottom:'0px', marginTop:'0px'}}>Av. Cobo 25359</p>

@@ -18,3 +18,11 @@
 
 }
 
+.contenedor-imagen-redes{
+    transition: transform .3s;
+
+}
+
+.contenedor-imagen-redes img:hover{
+    transform: scale(1.09);
+}

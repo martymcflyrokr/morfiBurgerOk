@@ -5,7 +5,6 @@ import { collection, addDoc } from '@firebase/firestore';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { fontSize } from '@mui/system';
 
 
 const Empleo = (() => {
@@ -47,12 +46,19 @@ const Empleo = (() => {
         const ordenFirebase = collection( db, 'postulaciones',)
         const orderDoc = await addDoc(ordenFirebase, nuevoPostulante)
         setPostulacionCompleta(orderDoc.id)
-        console.log('Postulación completa : ', orderDoc.id)
+        if (postulacionCompleta) {
+            notify()
+            console.log('Postulación completa : ', orderDoc.id)
+        }
     }
 
-    const notify = () => toast("Postulación enviada. Buena suerte!", {
-        fontSize:'2px'
-    });
+    const notify = () => toast("Postulación exitosa, buena suerte!",{
+        className: 'black-background',
+        bodyClassName: "grow-font-size",
+        progressClassName: 'fancy-progress-bar'
+      });
+
+    
     
     return (
         <div className='contenedor-formulario-general'>
@@ -102,9 +108,8 @@ const Empleo = (() => {
                                 required></TextField>
                         </li>
                         <li>
-                            <Button variant='contained' type='submit' onClick={notify}>POSTULATE!</Button>
-                            <ToastContainer />
-                            
+                            <Button variant='contained' type='submit'>POSTULATE!</Button>
+                            <ToastContainer  style={{ fontSize: "1rem" }} />                            
                         </li>
 
                     </ul>
