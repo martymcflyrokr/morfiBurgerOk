@@ -12,7 +12,7 @@ import db from '../utils/firebaseConfig'
 const Cart = (( ) => {
 
 
-    const { cartListItems, precioTotal, cantidadEnCarro, deleteItem, getPrecioTotal, clearCart} = useContext(CartContext)
+    const { cartListItems, cantidadEnCarro, deleteItem, getPrecioTotal, clearCart} = useContext(CartContext)
 
     useEffect(()=> {
         validadorProductos()
@@ -37,6 +37,7 @@ const Cart = (( ) => {
         }), 
         total: getPrecioTotal()
     })
+    
     const [ordenCompleta, setOrdenCompleta] = useState()
  
     const handleSubmit = (e) => {
