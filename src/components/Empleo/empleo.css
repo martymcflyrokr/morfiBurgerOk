@@ -1,5 +1,6 @@
 .contenedor-formulario-general{ 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content:center;
     box-shadow: 13px 10px 15px -7px rgba(0,0,0,0.1);
