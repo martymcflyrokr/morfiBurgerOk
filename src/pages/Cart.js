@@ -174,6 +174,7 @@ const Cart = (( ) => {
                                         className='items-form'
                                         onChange={handleChange}
                                         value={formValue.nombre}
+                                        required
                                         >
                                     </TextField>
                                     <TextField 
@@ -183,6 +184,7 @@ const Cart = (( ) => {
                                         className='items-form'
                                         onChange={handleChange}
                                         value={formValue.telefono}
+                                        required
                                         >
                                     </TextField>
                                     <TextField 
@@ -192,6 +194,7 @@ const Cart = (( ) => {
                                         className='items-form'
                                         onChange={handleChange}
                                         value={formValue.email}
+                                        required
                                         >
                                     </TextField>
                                     <Button 
