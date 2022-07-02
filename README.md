@@ -27,8 +27,7 @@ Debes ejecutar 'npm start' en la consola.
 ## Screenshots
 
 
-![final](https://user-images.githubusercontent.com/22405706/171771774-7db819e3-79c8-4a88-b1da-744d801ba25f.gif)
-
+![GIF ANIMATION](public/Animation.gif)
 
 
 
