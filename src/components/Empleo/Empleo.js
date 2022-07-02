@@ -37,9 +37,6 @@ const Empleo = (() => {
         e.preventDefault()
         setPostulacion({...postulacion, postulante : formValue})
         guardarPostulante({...postulacion, postulante : formValue})
-
-        console.log('esta es la postulacion tomada del handle: ', formValue)
-
     }
     
     const guardarPostulante = async (nuevoPostulante) => {
@@ -48,7 +45,6 @@ const Empleo = (() => {
         setPostulacionCompleta(orderDoc.id)
         if (postulacionCompleta) {
             notify()
-            console.log('Postulación completa : ', orderDoc.id)
         }
     }
 
