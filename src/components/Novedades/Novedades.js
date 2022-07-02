@@ -15,7 +15,8 @@ const Novedades = () => {
                 <Col>
                 <div className='contenedor-imagen-novedades'>
                     <img src='../../images/carrouselimgs/novedades.png' 
-                        className='imagen-novedades'/>
+                        className='imagen-novedades'
+                        alt='imagen-novedades-megamarado'/>
                     <div className='texto-novedades'>
                         <p>La nueva especialidad de la casa<br/> a tan solo 1400 ARS.</p>
                         <Button variant='contained'><Link to='/categoria/especial' style={{textDecoration:'none', color:'white'}}>COMPRAR AQUÍ</Link></Button>                   
