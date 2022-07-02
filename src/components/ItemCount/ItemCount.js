@@ -9,7 +9,6 @@ const ItemCount = ({stock, actualizarCantidad, cantidad, onAdd}) => {
 
         if( cantidad < stock ) {
             actualizarCantidad(cantidad + 1)
-            // console.log('Producto agregado: ', data)
         }
     };
 

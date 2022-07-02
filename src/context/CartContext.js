@@ -10,7 +10,6 @@ const CartProvider = ({children}) => {
     const [cantidadEnCarro, setCantidadEnCarro] = useState (0)
 
     useEffect ( () => {
-        console.log('Carrito Modificado: ', cartListItems)
         setCantidadEnCarro(getQuantity())
         setPrecioTotal(getPrecioTotal())
     },[cartListItems])
@@ -48,14 +47,12 @@ const CartProvider = ({children}) => {
         const auxCart = cartListItems.filter(cartItem => cartItem.id !== id);
         setCartListItems(auxCart);
         getPrecioTotal()
-        console.log('producto eliminado del carrito')
     }
 
     const clearCart = () => {
         setCartListItems([])
         setCantidadEnCarro (0)
         getPrecioTotal()
-        console.log('Se vaciaron todos los elementos del carrito')
     }
 
    

@@ -43,9 +43,7 @@ const Cart = (( ) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         setOrden({...orden, comprador : formValue})
-        guardarOrden({...orden, comprador : formValue})
-        console.log("prevent default : ", orden)
-        
+        guardarOrden({...orden, comprador : formValue})        
     }
 
     const handleChange = (e) => {
@@ -61,9 +59,7 @@ const Cart = (( ) => {
     const guardarOrden = async (nuevaOrden) => {
         const ordenFirebase = collection( db, 'ordenes',)
         const orderDoc = await addDoc(ordenFirebase, nuevaOrden)
-        setOrdenCompleta(orderDoc.id)
-        console.log('orden generada : ', orderDoc.id)
-        
+        setOrdenCompleta(orderDoc.id)        
     }
 
     const style = {
