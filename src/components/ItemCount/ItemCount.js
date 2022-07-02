@@ -1,7 +1,6 @@
 import '../ItemCount/itemCount.css'
 import '../Item/Item'
 import Button from '@mui/material/Button';
-import { Alert } from '@mui/material';
 
 const ItemCount = ({stock, actualizarCantidad, cantidad, onAdd}) => {
 
