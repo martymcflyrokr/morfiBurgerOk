@@ -21,13 +21,16 @@ También se agregó un formulario de contacto para postulaciones o franquicias, 
 
 ## Librerias utilizadas
 Utilicé React | Css | Html | Javascript.
-Tomé la decisión de utilizar MUI para la estetica y funcionalidad, y en algunas secciones se utilizó Bootstrap.
+Tomé la decisión de utilizar MUI para la estetica y funcionalidad, y en algunas secciones se utilizó Bootstrap y también Toastify.
 
 ## FAQ
 
 #### Para ejecutar la aplicación:
 
-Debes ejecutar 'npm start' en la consola.
+Una vez clonado el repositorio, ingresar a la carpeta del proyecto y ejecutar:
+'npm i'
+Esto instalará todas las dependencias y luego que se termina la instalación
+Debes ejecutar 'npm run start' en la consola.
 
 
 ## GIF funcionalidad
