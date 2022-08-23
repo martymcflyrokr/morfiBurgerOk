@@ -25,10 +25,9 @@ const ItemCount = ({stock, actualizarCantidad, cantidad, onAdd}) => {
                 <p>{cantidad}</p>
             </div>
             <Button variant="outlined" onClick={clickSuma} >+</Button>
-            <Button variant="contained" onClick={ () => {onAdd(cantidad)}}>AGREGAR PRODUCTOS</Button>
+            
         </div>
-            
-            
+        <Button variant="contained" onClick={ () => {onAdd(cantidad)}}>AGREGAR PRODUCTOS</Button>
         </>
             
     )

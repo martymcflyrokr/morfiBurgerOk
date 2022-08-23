@@ -4,8 +4,9 @@
     align-items: center;
     justify-content:center;
     box-shadow: 13px 10px 15px -7px rgba(0,0,0,0.1);
-    padding-bottom: 5%;
-    margin-top: 5%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 .formulario-campos {

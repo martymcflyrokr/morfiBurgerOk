@@ -1,10 +1,11 @@
 import '../ItemDetail/itemDetail.css'
-import { Grid, Container, Button } from '@mui/material'
+import { Button } from '@mui/material'
 import ItemCount from '../ItemCount/ItemCount'
 import { useState} from 'react'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import CartContext from '../../context/CartContext'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const ItemDetail = ({data}) => {
 
@@ -27,11 +28,11 @@ const ItemDetail = ({data}) => {
     return (
         <div className="detalle-producto">
         <Container className="container-detalle-producto">
-            <Grid container spacing={2}>
-                <Grid item xs={8} className="contenedor-imagen-detail">
+            <Row>
+                <Col item xs={12} md={8} className="contenedor-imagen-detail">
                     <img src={`../images/${data.imagen}`} className="imagen-producto" alt="imagen-burger"/>
-                </Grid>
-                <Grid item xs={4} >
+                </Col>
+                <Col item xs={12} md={4} className="contenedor-detalles" >
                     <p className='titulo-burger'>{data.nombre}</p>
                     <p className='precio-burger'>Precio: ${data.precio}</p> 
                     <p className='descripcion-burger'>{data.descripcion}</p>
@@ -48,12 +49,10 @@ const ItemDetail = ({data}) => {
                         <div>
                         <Button variant='outlined'><Link to='/productos' style={{textDecoration:'none'}}>AGREGAR MAS PRODUCTOS</Link></Button>
                         <Button style={{background:'green'}}><Link style={{textDecoration:'none', color:'white'}}to='/cart' >IR A CHECKOUT</Link></Button>
-
                     </div>
                     }
-                </Grid>
-
-            </Grid>
+                </Col>
+            </Row>
         </Container>
         </div>
     )

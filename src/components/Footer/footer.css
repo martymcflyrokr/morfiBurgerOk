@@ -9,7 +9,9 @@
     justify-content: space-around;
     position:static;
     bottom:0;
-
+    height: max-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .contenedor-footer ul{

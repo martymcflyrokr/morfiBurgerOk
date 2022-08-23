@@ -2,7 +2,7 @@ import '../pages/contacto.css'
 import { Container} from "@mui/material"
 import { useState } from 'react'
 import Empleo from '../components/Empleo/Empleo'
-import { Grid } from '@mui/material'
+import { Row,Col } from 'react-bootstrap'
 
 
 const Contacto = () => {
@@ -17,16 +17,16 @@ const Contacto = () => {
        
             <Container className='contenedor-general-ubicacion'>
                             <div className="contenedor-ubicacion" style={{color:'black', paddingBottom:'20px', padding:'30px', flexWrap:'wrap'}}>
-                            <Grid container spacing={12}>
-                                <Grid item xs={4}>
+                            <Row container spacing={12}>
+                                <Col item xs={4}>
                                         <div className='contenedor-imagen-ubicacion'> 
                                             <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch'} 
                                                 onClick={ () => {handleClick('catan')}} />
                                             <p style={{marginBottom:'0px', marginTop:'0px'}}>CATAN SHOPPING</p>
                                             <p style={{marginBottom:'0px', marginTop:'0px'}}>Av. J. Manuel de Rosas 4235</p>
                                         </div>
-                                </Grid>
-                                <Grid item xs={4}>
+                                </Col>
+                                <Col item xs={4}>
 
                                         <div className='contenedor-imagen-ubicacion'>
                                             <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch2'}
@@ -34,16 +34,16 @@ const Contacto = () => {
                                             <p style={{marginBottom:'0px', marginTop:'0px'}}>B. DORREGO</p>
                                             <p style={{marginBottom:'0px', marginTop:'0px'}}>Lopez May 4235</p>
                                         </div>
-                                </Grid>
-                                <Grid item xs={4}>
+                                </Col>
+                                <Col item xs={4}>
                                         <div className='contenedor-imagen-ubicacion'>
                                             <img src="./images/icons/shophouse.png" style={{width: '20%'}} alt={'icono-merch3'}
                                                 onClick={ () => {handleClick('independencia')}}/>
                                             <p style={{marginBottom:'0px', marginTop:'0px'}}>B. INDEP.</p>
                                             <p style={{marginBottom:'0px', marginTop:'0px'}}>Av. Cobo 25359</p>
                                         </div>
-                                </Grid>
-                            </Grid>
+                                </Col>
+                            </Row>
 
                             </div>
                             

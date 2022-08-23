@@ -8,24 +8,24 @@ const Footer = ( () => {
     return (
         <Container fluid className="contenedor-footer">
             <Row className="row-footer">
-                <Col>
+                <Col xs={12} md={3} >
                     <p>Todos los derechos reservados <br/>®MORFIBURGEROK - 2022</p>
                 </Col>
-                <Col className="columna-sugerencias">
+                <Col xs={12} md={3} className="columna-sugerencias">
                     <ul style={{textDecoration:'none', listStyle:'none'}}>
                         <li><h6>TRABAJA CON NOSOTROS</h6></li>
                         <Link to='/contacto' style={{textDecoration:'none', color:'black'}}><li>DEJANOS TU CV</li></Link>
                         <Link to='/contacto' style={{textDecoration:'none', color:'black'}}><li>FRANQUICIAS</li></Link>
                     </ul>
                 </Col>
-                <Col className="columna-nosotros">
+                <Col xs={12} md={3} className="columna-nosotros">
                     <ul style={{textDecoration:'none', listStyle:'none'}}>
                         <li><h6>INFORMACIÓN</h6></li>
                         <Link to='/contacto' style={{textDecoration:'none', color:'black'}}><li>NUESTRAS SUCURSALES</li></Link>
                         <Link to='/contacto' style={{textDecoration:'none', color:'black'}}><li>CONTACTO</li></Link>
                     </ul>
                 </Col>
-                <Col className="columna-redes">
+                <Col xs={12} md={3} className="columna-redes">
                 <ul style={{textDecoration:'none', listStyle:'none'}}>
                     <li><img src='../images/footer/instagram.png' alt='imagen-icono-insta'/> @MORFIBURGEROK</li>
                     <li><img src='../images/footer/facebook.png' alt='imagen-icono-fb'/> /MORFIBURGEROK</li>

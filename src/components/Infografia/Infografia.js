@@ -1,11 +1,13 @@
 import '../Infografia/infografia.css'
 import { Container, Row, Col } from 'react-bootstrap'
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
 
 const Infografia = (() => {
     return (
+        
         <Container className="contenedor-infografia">
             <Row className="contenedor-columnas-infografia">
-                <Col>
+                <Col xs={12} md={4}>
                     <div className='contenedor-imagen'>
                         <img className = "imagen-infografia" src="../images/infografia/horarios.png" alt='imagen-infografia3'/>
                     </div>
@@ -18,7 +20,7 @@ const Infografia = (() => {
                         </p>
                     </div>
                 </Col>
-                <Col>
+                <Col xs={12} md={4}>
                     <div className='contenedor-imagen'>
                         <img className = "imagen-infografia" src="../images/infografia/corporate.png" alt='imagen-infografia1'/>
                     </div>
@@ -31,7 +33,7 @@ const Infografia = (() => {
                         </p>
                     </div>
                 </Col>
-                <Col>
+                <Col xs={12} md={4}>
                     <div className='contenedor-imagen'>
                         <img className = "imagen-infografia" src="../images/infografia/music.png" alt='imagen-infografia2'/>
                     </div>

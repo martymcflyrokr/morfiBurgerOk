@@ -5,6 +5,7 @@ import { collection, addDoc } from '@firebase/firestore';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Row, Col } from 'react-bootstrap';
 
 
 const Empleo = (() => {
@@ -57,8 +58,8 @@ const Empleo = (() => {
     
     
     return (
-        <div className='contenedor-formulario-general'>
-            <div className='Titulo-formulario-empleo'>
+        <Row className='contenedor-formulario-general'>
+            <Col className='Titulo-formulario-empleo'>
                 <h2>TRABAJÁ CON NOSOTROS</h2>
                 <p>Te ofrecemos un excelente clima laboral,<br/>un sueldo acorde al mercado y muchos beneficios mas!<br/>
                     Tenemos posiciones abiertas para administrativos y atención al cliente.
@@ -67,51 +68,53 @@ const Empleo = (() => {
                 <p>Si queres informarte acerca de nuestro metodo de franquicias, escribi "franquicia"<br/>
                     en el campo Puesto del formulario.
                 </p>
-            </div>
-            <form className="formulario-empleo" onSubmit={handleSubmit}>
-                <div className='formulario-campos'>
-                    <ul className='lista-items-form'>
-                        <li>
-                            <TextField className='input-formulario' 
-                                label='NOMBRE Y APELLIDO'
-                                name='nombre'
-                                value= {formValue.nombre}
-                                onChange={handleChange} 
-                                required></TextField>
-                        </li>
-                        <li>
-                            <TextField className='input-formulario' 
-                                label='TELEFONO'
-                                name='telefono'
-                                value= {formValue.telefono}
-                                onChange={handleChange}
-                                required></TextField>
-                        </li>
-                        <li>
-                            <TextField className='input-formulario' 
-                                label='EMAIL'
-                                name='email'
-                                value= {formValue.email}
-                                onChange={handleChange}
-                                required></TextField>
-                        </li>
-                        <li>
-                            <TextField className='input-formulario' 
-                                label='PUESTO'
-                                name='puesto'
-                                value= {formValue.puesto}
-                                onChange={handleChange}
-                                required></TextField>
-                        </li>
-                        <li>
-                            <Button variant='contained' type='submit'>POSTULATE!</Button>
-                            <ToastContainer  style={{ fontSize: "1rem" }} />                            
-                        </li>
+            </Col>
+            <Col>    
+                <form className="formulario-empleo" onSubmit={handleSubmit}>
+                    <div className='formulario-campos'>
+                        <ul className='lista-items-form'>
+                            <li>
+                                <TextField className='input-formulario' 
+                                    label='NOMBRE Y APELLIDO'
+                                    name='nombre'
+                                    value= {formValue.nombre}
+                                    onChange={handleChange} 
+                                    required></TextField>
+                            </li>
+                            <li>
+                                <TextField className='input-formulario' 
+                                    label='TELEFONO'
+                                    name='telefono'
+                                    value= {formValue.telefono}
+                                    onChange={handleChange}
+                                    required></TextField>
+                            </li>
+                            <li>
+                                <TextField className='input-formulario' 
+                                    label='EMAIL'
+                                    name='email'
+                                    value= {formValue.email}
+                                    onChange={handleChange}
+                                    required></TextField>
+                            </li>
+                            <li>
+                                <TextField className='input-formulario' 
+                                    label='PUESTO'
+                                    name='puesto'
+                                    value= {formValue.puesto}
+                                    onChange={handleChange}
+                                    required></TextField>
+                            </li>
+                            <li>
+                                <Button variant='contained' type='submit'>POSTULATE!</Button>
+                                <ToastContainer  style={{ fontSize: "1rem" }} />                            
+                            </li>
 
-                    </ul>
-                </div>
-            </form>
-        </div>
+                        </ul>
+                    </div>
+                </form>
+            </Col>
+        </Row>
     )
 })
 
