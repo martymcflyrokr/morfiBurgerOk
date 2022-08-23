@@ -1,4 +1,5 @@
 import * as React from 'react';
+import '../NavBar/navBar.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,6 +13,7 @@ import CustomizedBadges from './CartWidget'
 import { Link } from 'react-router-dom';
 import CartContext from "../../context/CartContext"
 import { useContext, useEffect, useState } from "react"
+import { Row, Col } from 'react-bootstrap';
 
 const ResponsiveAppBar = () => {
 
@@ -46,16 +48,18 @@ const ResponsiveAppBar = () => {
   };
 
 
-  return (
+  return ( 
     <AppBar position="sticky" style={{ background: '#000000' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           
-          <div className="contenedorLogo" style= {{ width: '70px', padding: '10px 20px 3px'}} >
-            
-            <img src="./morfilogooficial.png" style={{padding: '2px', width: '100%'}} alt='logo-morfiburger'></img>
-    
-          </div>
+          <Row className='icono-morfi'>
+            <Col>
+            <div className="contenedor-logo" id="contenedor-logo" style= {{ width: '100px', padding: '10px 20px 3px'}} >
+              <img src="./morfilogooficial.png" style={{padding: '2px', width: '100%'}} alt='logo-morfiburger'></img>
+            </div>
+            </Col>
+          </Row>
           
           <Typography
             variant="h6"
